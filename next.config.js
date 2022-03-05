@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   env: {
-    MONGODB_URI: "mongodb://localhost:27017/gestion_des_dechets",
+    MONGODB_URI: "mongodb+srv://new_user:S53oJfV3i38n2Jki@cluster0.i52k8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     SECRET:"LfsZWKdsKRwhz5bS7YOEI0A564a37saF"
     
     
