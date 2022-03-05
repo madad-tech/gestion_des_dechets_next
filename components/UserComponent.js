@@ -41,7 +41,7 @@ Supprimer
     <div className="text-lg text-left">{data.email}</div>
 </td>
 <td className="p-2 whitespace-nowrap">
-    <div className="text-lg text-left">{data.role=='ADMIN' ? 'ADMIN':'Employé' }</div>
+    <div className="text-lg text-left">{data.role=='admin' ? 'ADMIN':'Employé' }</div>
 </td>
 
 </tr>;;
