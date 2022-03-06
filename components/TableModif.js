@@ -103,8 +103,8 @@ useEffect( ()=>{
                     </tbody>
                 </table>
             </div>
-            <Pagination onClickHandler={onclickPagination} size={size} ></Pagination>  <p className='textBold'><span className='spanOrange'>1 - En cours de traitement /</span><span className='spanBlue' > 2 - Traité / </span><span className="spanGreen">3 - Remis</span></p>
-        </div>
+            <Pagination onClickHandler={onclickPagination} size={size} ></Pagination> 
+		</div>
         
     </div>
     
