@@ -4,6 +4,7 @@ import CreateConteneurButton from './CreateConteneurButton';
 import { useSession } from 'next-auth/react';
 import ConteneurComponent from './ConteneurComponent';
 import axios from 'axios';
+import IndexNavbar from "../components/Navbars/IndexNavbar.js";
 
 const TableConteneur = () => {
     const [size,setSize]=useState(1);
@@ -71,6 +72,7 @@ useEffect( ()=>{
 
     <div className="grid place-items-center h-screen">
   {session!=undefined && (<CreateConteneurButton></CreateConteneurButton>)} 
+  <IndexNavbar fixed />
     <div className="w-full max-w-6xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200 ">
         <header className="px-5 py-4 border-b border-gray-100">
            <div><h2 className="font-semibold text-gray-800 titleConteneur">Liste de conteneur à traiter </h2>

@@ -3,6 +3,7 @@ import Pagination from './Pagination';
 import { useSession } from 'next-auth/react';
 import ModifComponent from './ModifComponent';
 import axios from 'axios';
+import IndexNavbar from "../components/Navbars/IndexNavbar.js";
 
 const TableModif = (props) => {
 	const c_id=props.id;
@@ -57,9 +58,9 @@ useEffect( ()=>{
 },[])
 
   return (
-
+    
     <div className="grid place-items-center h-screen">
-  
+            <IndexNavbar fixed />
     <div className="w-full max-w-6xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200 ">
         <header className="px-5 py-4 border-b border-gray-100">
            <div><h2 className="font-semibold text-gray-800 titleModif">Liste de modif à traiter </h2>

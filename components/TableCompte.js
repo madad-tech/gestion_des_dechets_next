@@ -3,7 +3,7 @@ import UserComponent from './UserComponent';
 import { useState,useEffect } from 'react';
 import Pagination from '../components/Pagination';
 import axios from 'axios';
-
+import IndexNavbar from "../components/Navbars/IndexNavbar.js";
 const TableCompte = () => {
     
 
@@ -94,7 +94,7 @@ const TableCompte = () => {
 
   return (
     <div className="grid place-items-center h-screen">
-   
+   <IndexNavbar fixed />
       <div className="w-full max-w-6xl mx-auto bg-white shadow-lg rounded-sm border border-gray-200 ">
           <header className="px-5 py-4 border-b border-gray-100">
               <h2 className="font-semibold text-gray-800 titleConteneur">Gestion de comptes</h2>

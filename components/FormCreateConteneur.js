@@ -7,6 +7,8 @@ import Message from './Message';
 import 'nprogress/nprogress.css'
 import Nprogress from 'nprogress'
 import { useSession } from 'next-auth/react';
+import IndexNavbar from "../components/Navbars/IndexNavbar.js";
+import Footer from "../components/Footers/Footer.js";
 
 const FormCreateConteneur = ({dataProps}) => {
     const [error,setError]=useState(false)
@@ -129,10 +131,11 @@ addConteneur(data);
         {showProgress && <Progress></Progress>}
         {error && <Message message={message} color="red"></Message> }
     {success && <Message message={messageSuccess} color="green"></Message> }
+    <IndexNavbar fixed /> 
 <section className="w-full max-w-4xl px-6 py-4 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
         <h2 className="text-2xl font-semibold text-center text-gray-800 dark:text-white">Ajouter un nouveau conteneur</h2>
        
-  
+        
         <form onSubmit={createConteneur}>
         <div className="mt-6 ">
             <div className="items-center -mx-2 md:flex">
@@ -185,8 +188,9 @@ addConteneur(data);
             </div>
         </div>
         </form>
+         
     </section>
-      
+     
   </div>;
 };
 

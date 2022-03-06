@@ -2,6 +2,8 @@ import React from 'react';
 import FormCreateConteneur from '../components/FormCreateConteneur';
 import { getSession } from 'next-auth/react';
 
+import IndexNavbar from "../components/Navbars/IndexNavbar.js";
+import Footer from "../components/Footers/Footer.js";
 const addConteneur = ({data}) => {
   return <div>
      <FormCreateConteneur dataProps={data}></FormCreateConteneur>
