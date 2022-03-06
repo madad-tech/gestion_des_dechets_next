@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import 'nprogress/nprogress.css'
 import Nprogress from 'nprogress'
 import { SessionProvider } from "next-auth/react"
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "../styles/tailwind.css";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
