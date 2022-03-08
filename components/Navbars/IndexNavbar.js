@@ -1,11 +1,19 @@
 import React from "react";
 import Link from "next/link";
+import { useSession, signOut } from 'next-auth/react';
+import { useRouter } from 'next/router';
 // components
 
 import IndexDropdown from "../Dropdowns/IndexDropdown.js";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
+  
+  const router = useRouter();
+  const logoutHandler=async()=>{
+     await signOut({redirect: false, callbackUrl: "/auth"})
+    router.reload();
+  }
   return (
     <>
       <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
@@ -47,6 +55,7 @@ export default function Navbar(props) {
                 <button
                   className="bg-blueGray-700 text-white active:bg-blueGray-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
                   type="button"
+				  onClick={logoutHandler}
                 >
                   <i className="fa-solid fa-right-from-bracket">   Log out</i>
                   
