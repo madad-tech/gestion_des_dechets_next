@@ -11,20 +11,11 @@ export default function dashboard() {
       <IndexNavbar fixed />
       <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
         <div className="container mx-auto items-center flex flex-wrap">
-          <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+          <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px4">
             <div className="pt-32 sm:pt-0">
               <h2 className="font-semibold text-4xl text-blueGray-600">
-              La gestion des déchets digitalsée              </h2>
-              <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
-
-                <a  className="text-blueGray-600"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Hôpital de benguerir
-                </a>
-                
-              </p>
+              Application de gestion de déchets</h2>
+              
               <div className="mt-12">
                 <a className="get-started text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-blueGray-400 active:bg-blueGray-500 uppercase text-sm shadow hover:shadow-lg ease-linear transition-all duration-150" 
                 href="/addConteneur">Ajouter Un conteneur</a>
