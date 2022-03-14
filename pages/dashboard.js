@@ -5,6 +5,8 @@ import Link from "next/link";
 import IndexNavbar from "../components/Navbars/IndexNavbar.js";
 import Footer from "../components/Footers/Footer.js";
 
+import { getSession } from 'next-auth/react';
+
 export default function dashboard() {
   return (
     <>
@@ -52,22 +54,26 @@ export default function dashboard() {
 }
 
 export async function getServerSideProps(context) {
-  const session = await getSession({ req: context.req });
-  if (!session) {
-    
-      return {
-          redirect: {
-              destination: '/auth',
-              permanent: false,
-          },
-      };
-  
-  }
-  return {
-    redirect:{
-      destination: '/dashboard',
-            permanent: false,
+    const session = await getSession({ req: context.req });
+    let data=context.query;
+    if (!session) {
+       
+        return {
+            redirect: {
+                destination: '/auth',
+                permanent: false,
+            },
+        };
     }
+    else if(session.user!=undefined){
+        
+            return {
+                props: { session,data },
+            }
+    
+    
+    }
+    
   }
   
-}
+
